@@ -1,6 +1,29 @@
 import java.util.Random;
 import java.util.Scanner;
 public class rock_paper_scissor {
+    static void myGame(String comp,String me){
+        if(comp.equals("r")&&me.equals("p")){
+            System.out.println("You Win");
+        }
+        else if(comp.equals("r") && me.equals("s")){
+            System.out.println("You Loose");
+        }
+        else if(comp.equals("p")&&me.equals("r")){
+            System.out.println("You Loose");
+        }
+        else if(comp.equals("p") && me.equals("s")){
+            System.out.println("You Win");
+        }
+        else if(comp.equals("s")&&me.equals("p")){
+            System.out.println("You Loose");
+        }
+        else if(comp.equals("s")&& me.equals("r")){
+            System.out.println("You Win");
+        }
+        else{
+            System.out.println("Game Draw");
+        }
+    }
     public static void main(String[] args){
         String comp,me;
         while(true){
@@ -24,30 +47,10 @@ public class rock_paper_scissor {
                 System.out.println("I Quit");
                 break;
             }
-            if(comp.equals("r")&&me.equals("p")){
-                System.out.println("You Win");
-            }
-            else if(comp.equals("r") && me.equals("s")){
-                System.out.println("You Loose");
-            }
-            else if(comp.equals("p")&&me.equals("r")){
-                System.out.println("You Loose");
-            }
-            else if(comp.equals("p") && me.equals("s")){
-                System.out.println("You Win");
-            }
-            else if(comp.equals("s")&&me.equals("p")){
-                System.out.println("You Loose");
-            }
-            else if(comp.equals("s")&& me.equals("r")){
-                System.out.println("You Win");
-            }
-            else{
-                System.out.println("Game Draw");
-            }
+            myGame(comp, me);
             System.out.println("-----------------------");
-            System.out.println("Computer Chooses: "+ comp);
-            System.out.println("I Choose: "+ me);
+            System.out.println("Computers Response: "+ comp);
+            System.out.println("My Response: "+ me);
             System.out.println("-----------------------");
             }
     }
